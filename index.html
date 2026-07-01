@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Triveni Turbhekar | Digital Marketing Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    padding:80px 0;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:#1e3a8a;
+}
+
+/* Header */
+
+header{
+    background:linear-gradient(135deg,#1e3a8a,#7c3aed);
+    color:white;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero-text h3{
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    margin-bottom:25px;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    margin-right:10px;
+    transition:.3s;
+}
+
+.primary{
+    background:white;
+    color:#1e3a8a;
+}
+
+.secondary{
+    border:2px solid white;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.profile-card{
+    width:320px;
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    color:#333;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.profile-card img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.profile-card h4{
+    color:#1e3a8a;
+}
+
+/* About */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.card p{
+    line-height:1.8;
+}
+
+/* Skills */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.skill-box{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.skill-box ul{
+    list-style:none;
+    margin-top:15px;
+}
+
+.skill-box li{
+    margin:8px 0;
+}
+
+/* Experience */
+
+.timeline{
+    position:relative;
+    max-width:1000px;
+    margin:auto;
+}
+
+.timeline::after{
+    content:'';
+    position:absolute;
+    width:4px;
+    background:#7c3aed;
+    top:0;
+    bottom:0;
+    left:50%;
+    margin-left:-2px;
+}
+
+.exp{
+    padding:10px 40px;
+    position:relative;
+    width:50%;
+}
+
+.exp::after{
+    content:'';
+    position:absolute;
+    width:18px;
+    height:18px;
+    background:#7c3aed;
+    border-radius:50%;
+    top:20px;
+    right:-9px;
+}
+
+.left{
+    left:0;
+}
+
+.right{
+    left:50%;
+}
+
+.right::after{
+    left:-9px;
+}
+
+.content{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* Projects */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.project{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.project img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.project-body{
+    padding:20px;
+}
+
+/* Achievements */
+
+.achievements{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.achievement{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* Contact */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+    font-size:1.05rem;
+}
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero-text h1{
+    font-size:2.2rem;
+}
+
+.about{
+    grid-template-columns:1fr;
+}
+
+.timeline::after{
+    left:31px;
+}
+
+.exp{
+    width:100%;
+    padding-left:70px;
+    padding-right:20px;
+}
+
+.exp::after{
+    left:22px;
+}
+
+.right{
+    left:0;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container hero">
+
+<div class="hero-text">
+<h1>Triveni Hariram Turbhekar</h1>
+<h3>Digital Marketing | Social Media Executive | Performance Marketer</h3>
+
+<p>
+Helping brands grow through strategic social media marketing,
+performance advertising, lead generation, and engaging content strategies.
+</p>
+
+<a href="#contact" class="btn primary">Hire Me</a>
+<a href="#" class="btn secondary">Download Resume</a>
+</div>
+
+<div class="profile-card">
+<img src="photo.png" alt="Profile">
+<h4>Triveni Turbhekar</h4>
+<p>Digital Marketing Professional</p>
+</div>
+
+</div>
+</header>
+
+<section id="about">
+<div class="container">
+<h2>About Me</h2>
+
+<div class="about">
+
+<div class="card">
+<p>
+I'm a Digital Marketing Professional with experience in Social Media
+Management, Performance Marketing, Content Strategy, Meta Ads,
+Google Ads, and Brand Promotion.
+
+I have worked with agencies and businesses across various industries,
+managing campaigns that drive engagement, brand awareness, and lead generation.
+</p>
+</div>
+
+<div class="card">
+<p>
+📍 Mumbai, India<br><br>
+🎓 B.Sc. Mathematics<br><br>
+💼 4+ Years Experience<br><br>
+🌐 Social Media & Performance Marketing Specialist
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill-box">
+<h3>Social Media</h3>
+<ul>
+<li>Facebook Marketing</li>
+<li>Instagram Marketing</li>
+<li>LinkedIn Marketing</li>
+<li>YouTube Marketing</li>
+</ul>
+</div>
+
+<div class="skill-box">
+<h3>Performance Marketing</h3>
+<ul>
+<li>Meta Ads</li>
+<li>Google Ads</li>
+<li>Lead Generation</li>
+<li>Audience Targeting</li>
+</ul>
+</div>
+
+<div class="skill-box">
+<h3>Content Marketing</h3>
+<ul>
+<li>Content Writing</li>
+<li>Content Planning</li>
+<li>Hashtag Research</li>
+<li>Content Calendar</li>
+</ul>
+</div>
+
+<div class="skill-box">
+<h3>Tools</h3>
+<ul>
+<li>Canva</li>
+<li>WordPress</li>
+<li>MS Office</li>
+<li>Ads Manager</li>
+</ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>Experience</h2>
+
+<div class="timeline">
+
+<div class="exp left">
+<div class="content">
+<h3>Pro-Talk Tech</h3>
+<h4>Social Media Executive</h4>
+<p>Oct 2024 – Jul 2025</p>
+</div>
+</div>
+
+<div class="exp right">
+<div class="content">
+<h3>Abstract Digital World</h3>
+<h4>Performance Marketer</h4>
+<p>May 2024 – Sep 2024</p>
+</div>
+</div>
+
+<div class="exp left">
+<div class="content">
+<h3>Amuwa Corporation</h3>
+<h4>Social Media Manager</h4>
+<p>Nov 2023 – Apr 2024</p>
+</div>
+</div>
+
+<div class="exp right">
+<div class="content">
+<h3>Suvitech Digital</h3>
+<h4>Social Media Manager</h4>
+<p>Jan 2023 – Aug 2023</p>
+</div>
+</div>
+
+<div class="exp left">
+<div class="content">
+<h3>HS Digital Media</h3>
+<h4>Social Media Marketer</h4>
+<p>Jan 2022 – Nov 2022</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>Featured Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
+<div class="project-body">
+<h3>Real Estate Lead Generation</h3>
+<p>
+Created and optimized Meta & Google Ads campaigns to
+generate qualified leads.
+</p>
+</div>
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1517649763962-0c623066013b">
+<div class="project-body">
+<h3>Cricket League Campaign</h3>
+<p>
+Managed social media campaigns and live coverage for cricket events.
+</p>
+</div>
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+<div class="project-body">
+<h3>Multi Platform Brand Growth</h3>
+<p>
+Built content strategy and engagement campaigns across channels.
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container contact">
+<h2>Contact Me</h2>
+
+<p>📧 triveniturbhekar32335@gmail.com</p>
+<p>📱 +91 7039834434</p>
+<p>📍 Mumbai, Maharashtra, India</p>
+
+<br>
+
+<a href="mailto:triveniturbhekar32335@gmail.com" class="btn primary">
+Send Email
+</a>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 Triveni Turbhekar | Digital Marketing Portfolio</p>
+</footer>
+
+<script>
+
+// Smooth fade animation
+
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.style.opacity = 1;
+entry.target.style.transform = 'translateY(0)';
+}
+});
+});
+
+document.querySelectorAll('.card,.skill-box,.project,.achievement,.content')
+.forEach(el=>{
+el.style.opacity='0';
+el.style.transform='translateY(30px)';
+el.style.transition='all .8s ease';
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
